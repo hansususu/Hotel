@@ -96,4 +96,16 @@ public class MemberServiceImpl implements MemberService {
 		return memberDao.findDateTotal(map);
 	}
 
+	@Override
+	public void updateMile(MemberVo memberVo) throws Exception {
+		memberDao.updateMile(memberVo);
+		
+	}
+
+	@Override
+	public void updateGrade(MemberVo memberVo) throws Exception {
+		memberDao.updateGrade(memberVo);
+		
+	}
+
 }

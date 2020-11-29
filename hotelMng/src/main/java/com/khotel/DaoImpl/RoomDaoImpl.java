@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.khotel.Controller.HomeController;
 import com.khotel.Dao.RoomDao;
+import com.khotel.Vo.ReservationVo;
 import com.khotel.Vo.RoomVo;
 
 @Repository("roomDao")
@@ -48,7 +49,17 @@ public class RoomDaoImpl implements RoomDao{
 		sqlSession.delete("room.deleteRoom", roomVo);
 		
 	}
-
+	
+	@Override
+	public List<RoomVo> listRoomReservation(String roomNo) throws Exception {
+		return sqlSession.selectList("room.listRoomReservation", roomNo);
+	}
+	
+	@Override
+	public int findRoomReservation(HashMap<String, Object> map) {
+		return sqlSession.selectOne("room.findRoomReservation", map);
+	}
+	
 	@Override
 	public List<RoomVo> listRoom() throws Exception {
 		return sqlSession.selectList("room.listRoom");
@@ -83,6 +94,29 @@ public class RoomDaoImpl implements RoomDao{
 	public int findDateTotal(HashMap<String, Object> map) {
 		return sqlSession.selectOne("room.findDateTotal", map);
 	}
+
+	@Override
+	public int findRoom(HashMap<String, Object> map) {
+		return sqlSession.selectOne("room.findRoom", map);
+	}
 	
-	
+	@Override
+	public List<RoomVo> searchRoomList(ReservationVo reservation) throws Exception {
+		return sqlSession.selectList("room.findEmptyRoomList", reservation);
+	}
+
+	@Override
+	public List<RoomVo> searchSelectRoomList(ReservationVo reservation) throws Exception {
+		return sqlSession.selectList("room.findEmptySelectRoomList", reservation);
+	}
+
+	@Override
+	public List<RoomVo> searchRoomListCnt(ReservationVo reservation) throws Exception {
+		return sqlSession.selectList("room.findEmptyRoomListCnt", reservation);
+	}
+
+	@Override
+	public List<RoomVo> searchSelectRoomListCnt(ReservationVo reservation) throws Exception {
+		return sqlSession.selectList("room.findEmptySelectRoomListCnt", reservation);
+	}	
 }
