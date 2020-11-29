@@ -121,6 +121,9 @@ a {
 .m4{
   height: 50px;
 }
+.m5{
+  height: 50px;
+}
 h3 {
     margin: 19px 0 8px;
     font-size: 14px;
@@ -466,6 +469,7 @@ textarea {
     position:absolute; top:50%; left: 50%; transform:translate(-50%, -50%);
     background-color: #D4C1A1;
   }
+<<<<<<< Updated upstream
   .res_search{
     text-align: center;
     padding: 20px;
@@ -476,6 +480,8 @@ textarea {
     font-size: 20px;
   }
 
+=======
+>>>>>>> Stashed changes
   .myButton {
 	   background-color:#D4C1A1;
 	   border-radius:3px;
@@ -532,8 +538,8 @@ textarea {
   }
   .intbox .lbox {
     float: left;
-    margin-right: 30px;
-    width: 400px;
+    margin-right: 75px;
+    width: 450px;
     height: 70px;
     margin-bottom: 50px;
     padding: 0;
@@ -541,16 +547,16 @@ textarea {
   }
   .intbox .rbox {
     float: left;
-    width: 400px;
+    width: 450px;
     margin-bottom :50px;
     padding: 0;
 
   }
   .intbox .lbox .topexp{
     float: left;
-    width: 250px;
+    width: 450px;
   }
   .intbox .rbox .topxep{
     float: left;
-    width : 250px;
+    width : 430px;
   }
